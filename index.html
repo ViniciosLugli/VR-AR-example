@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Experiência WebXR - VR & AR</title>
+		<script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+		<style>
+			body {
+				margin: 0;
+			}
+			.interface-container {
+				position: fixed;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				text-align: center;
+				background: rgba(0, 0, 0, 0.8);
+				padding: 2em;
+				border-radius: 15px;
+				color: white;
+				font-family: Arial, sans-serif;
+				z-index: 1000;
+			}
+			.btn {
+				background: #4caf50;
+				color: white;
+				padding: 1em 2em;
+				margin: 1em;
+				border: none;
+				border-radius: 5px;
+				cursor: pointer;
+				transition: all 0.3s ease;
+				font-size: 1.1em;
+			}
+			.btn:hover {
+				background: #45a049;
+				transform: scale(1.05);
+			}
+			.btn-vr {
+				background: #2196f3;
+			}
+			.btn-ar {
+				background: #ff9800;
+			}
+			.title {
+				font-size: 2em;
+				margin-bottom: 1em;
+			}
+			.description {
+				margin-bottom: 2em;
+				line-height: 1.6;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="interface-container">
+			<h1 class="title">Experiência WebXR</h1>
+			<p class="description">Escolha entre explorar um ambiente em Realidade Virtual ou interagir com objetos em Realidade Aumentada</p>
+			<button onclick="startVRExperience()" class="btn btn-vr">Tour Virtual 360°</button>
+			<button onclick="startARExperience()" class="btn btn-ar">Realidade Aumentada</button>
+		</div>
+
+		<script>
+			function startVRExperience() {
+				window.location.href = 'vr-experience.html'
+			}
+
+			function startARExperience() {
+				window.location.href = 'ar-experience.html'
+			}
+		</script>
+	</body>
+</html>
